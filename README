@@ -1,0 +1,15 @@
+This formatter for Cucumber outputs textile, suitable for posting to a GitHub wiki page.
+
+The implementation is quite naive and skips cases like status of steps (passing, failing, pending).
+It also does not properly handle table steps because I'm not using them right now and can't
+really tell how they work.
+
+It is based on the HTML formatter, so there is almost certainly a more straightforward way
+to implement this.
+
+To use:
+
+Save textile_formatter.rb in features/support. Then:
+
+  cucumber features -ftextile
+  
