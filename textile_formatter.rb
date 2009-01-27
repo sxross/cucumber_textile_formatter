@@ -22,7 +22,7 @@ module Cucumber
       def visit_header(header)
         feature_lines = header.split("\n")
         @io.puts %{\nh2. #{feature_lines.shift}}
-        @io.puts "<blockquote>"
+        @io.puts "\n<blockquote>"
         feature_lines.each{|f| @io.puts "#{f}  "}
         @io.puts "</blockquote>"
       end
